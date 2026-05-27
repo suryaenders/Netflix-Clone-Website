@@ -12,7 +12,7 @@ const Player = () => {
     name: "",
     key: "",
     published_at: "",
-    typeof: "",
+    type: "",
   });
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Player = () => {
         allowFullScreen
       ></iframe>
       <div className="player-info">
-        <p>{apiData.published_at.slice(0, 10)}</p>
+        <p>{apiData.published_at && apiData.published_at.slice(0, 10)}</p>
         <p>{apiData.name}</p>
         <p>{apiData.type}</p>
       </div>
